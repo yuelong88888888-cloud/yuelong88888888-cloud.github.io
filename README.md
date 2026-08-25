@@ -14,11 +14,11 @@
 ## 仓库结构
 
 ```text
-.s
+
 ├── index.html                 # 网站首页
 ├── projects/                 # 项目展示页面
 ├── publications/             # 出版物与研究成果页面
-├── files/CV.pdf              # 个人简历
+├── files/Zyl.pdf              # 个人简历
 ├── assets/
 │   ├── css/style.css         # 网站样式
 │   └── images/               # 个人照片与项目图片
