@@ -1,0 +1,36 @@
+<header class="site-header">
+  <div class="shell header-inner">
+    <div class="social-links" aria-label="Contact links">
+      <a class="social-link" href="mailto:{{ site.email }}" aria-label="Email Yuelong Zhang">
+        <span aria-hidden="true">@</span>
+      </a>
+
+      {% if site.linkedin_url and site.linkedin_url != '' %}
+        <a
+          class="social-link social-link--linkedin"
+          href="{{ site.linkedin_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Yuelong Zhang on LinkedIn"
+        >
+          <span aria-hidden="true">in</span>
+        </a>
+      {% else %}
+        <span
+          class="social-link social-link--linkedin is-disabled"
+          aria-label="LinkedIn URL pending"
+          title="LinkedIn URL is not configured yet"
+        >
+          <span aria-hidden="true">in</span>
+        </span>
+      {% endif %}
+    </div>
+
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="{{ '/' | relative_url }}"{% if page.nav == 'about' %} class="is-active" aria-current="page"{% endif %}>about</a>
+      <a href="{{ '/publications/' | relative_url }}"{% if page.nav == 'publications' %} class="is-active" aria-current="page"{% endif %}>publications</a>
+      <a href="{{ '/projects/' | relative_url }}"{% if page.nav == 'projects' %} class="is-active" aria-current="page"{% endif %}>projects</a>
+      <a href="{{ '/files/CV.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">CV</a>
+    </nav>
+  </div>
+</header>

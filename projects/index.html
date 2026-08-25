@@ -1,0 +1,38 @@
+---
+title: Projects
+nav: projects
+permalink: /projects/
+description: Robotics research projects by Yuelong Zhang.
+---
+
+{% assign public_projects = site.projects | where: 'published', true | sort: 'order' %}
+<header class="page-header shell shell--content">
+  <p class="eyebrow">Research portfolio</p>
+  <h1>projects</h1>
+  <p class="page-intro">Mechanism design, dynamics, learning, and hardware validation for embodied robotic systems.</p>
+</header>
+
+<section class="listing-section shell shell--content" aria-label="Public projects">
+  <div class="project-list">
+    {% for project in public_projects %}
+      <article class="project-card">
+        <a class="project-card__media figure-surface" href="{{ project.url | relative_url }}" aria-label="Open the {{ project.title }} project page">
+          <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.thumbnail_alt | escape }}" width="1028" height="618" loading="lazy">
+        </a>
+        <div class="project-card__body">
+          <p class="card-label">{{ project.short_label | default: 'Research project' }}</p>
+          <h2><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h2>
+          <p class="project-card__subtitle">{{ project.subtitle }}</p>
+          <p>{{ project.description }}</p>
+          <ul class="tag-list" aria-label="{{ project.title }} topics">
+            {% for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}
+          </ul>
+          <div class="link-row">
+            <a class="text-link" href="{{ project.url | relative_url }}">Project Page <span aria-hidden="true">→</span></a>
+            {% if project.paper %}<a class="text-link" href="{{ project.paper | relative_url }}" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a>{% endif %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

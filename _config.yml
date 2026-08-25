@@ -1,0 +1,43 @@
+title: Yuelong Zhang
+description: >-
+  Personal academic website of Yuelong Zhang, featuring research in
+  bio-inspired robotics, compliant mechanisms, and bipedal locomotion.
+url: "https://zhangyuelong.github.io"
+baseurl: ""
+lang: en
+timezone: America/Chicago
+
+email: "yz156@illinois.edu"
+# TODO: Add Yuelong Zhang's confirmed LinkedIn profile URL.
+linkedin_url: ""
+social_image: "/assets/images/projects/sters/sters-cover.png"
+
+markdown: kramdown
+permalink: pretty
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      nav: projects
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - files/Zyl.pdf
+  - files/sters-paper.pdf
+  - assets/images/source
+  - assets/videos/source

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% if page.url == '/' %}
+      {% assign meta_title = site.title %}
+    {% else %}
+      {% assign meta_title = page.title | default: site.title %}
+    {% endif %}
+    {% assign meta_description = page.description | default: site.description %}
+    {% assign meta_image = page.hero | default: page.thumbnail | default: site.social_image %}
+
+    <title>{% if page.url == '/' %}{{ site.title }}{% else %}{{ meta_title }} · {{ site.title }}{% endif %}</title>
+    <meta name="description" content="{{ meta_description | strip_html | normalize_whitespace | escape }}">
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ meta_title | escape }}">
+    <meta property="og:description" content="{{ meta_description | strip_html | normalize_whitespace | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    {% if meta_image %}<meta property="og:image" content="{{ meta_image | absolute_url }}">{% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ meta_title | escape }}">
+    <meta name="twitter:description" content="{{ meta_description | strip_html | normalize_whitespace | escape }}">
+    {% if meta_image %}<meta name="twitter:image" content="{{ meta_image | absolute_url }}">{% endif %}
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body class="page page--{{ page.nav | default: 'default' }}">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    {% include header.html %}
+
+    <main id="main-content" class="site-main">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>

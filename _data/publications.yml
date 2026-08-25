@@ -1,0 +1,13 @@
+- id: sters
+  status: Under review
+  venue: IEEE/ASME Transactions on Mechatronics
+  title: An Active-Toe-Coupled Spring–Tendon Energy Recirculation System for Bipedal Locomotion
+  authors: Wenyu Li, Zhiyuan Xu, Yuelong Zhang, Jiaxing Li, Jingang Yi, and Tao Liu
+  image: /assets/images/projects/sters/sters-cover.png
+  image_alt: STERS biological inspiration, spring-tendon mechanism, and bipedal robot platforms
+  project: /projects/sters/
+  tags:
+    - Bio-inspired Robotics
+    - Bipedal Locomotion
+    - Elastic Actuation
+    - Reinforcement Learning
