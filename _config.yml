@@ -8,8 +8,7 @@ lang: en
 timezone: America/Chicago
 
 email: "yz156@illinois.edu"
-# TODO: Add Yuelong Zhang's confirmed LinkedIn profile URL.
-linkedin_url: ""
+linkedin_url: "https://www.linkedin.com/in/yuelong-zhang-4010333a7"
 social_image: "/assets/images/projects/sters/sters-cover.png"
 
 markdown: kramdown

@@ -19,7 +19,7 @@
 
 BioArm 暂不公开，目前没有页面、卡片或 publication 条目；后续资料确认适合公开后再加入。
 
-Email 与 LinkedIn 在 `_config.yml` 中集中配置。Email 已根据当前 CV 核对；`linkedin_url` 在真实主页地址确认前保持为空，并保留 TODO，不能自行编造。
+Email 与 LinkedIn 在 `_config.yml` 中集中配置，两个地址均已根据当前确认信息填写。
 
 ## STERS 项目页
 
@@ -265,7 +265,6 @@ https://yuelong88888888-cloud.github.io/files/CV.pdf
 
 ## TODO
 
-- 在确认真实 LinkedIn 主页后，填写 `_config.yml` 中的 `linkedin_url`。
 - 获得可公开的 STERS clean manuscript 后，再添加 `paper` 字段与 Paper 链接；当前 `files/sters-paper.pdf` 继续排除出站点。
 - 只有出现真实、可验证的动态时才填写 `_data/news.yml`。
 - BioArm 资料适合公开后再添加项目文件、媒体与对应 publication；此前不显示占位内容。
