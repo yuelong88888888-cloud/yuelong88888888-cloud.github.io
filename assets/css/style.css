@@ -186,10 +186,17 @@ figcaption {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #dddadd;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #dedbdd;
   line-height: 1;
   text-decoration: none;
   transition: color 150ms ease, transform 150ms ease;
+}
+
+.social-link:visited {
+  color: #dedbdd;
 }
 
 .social-link:hover {
@@ -201,6 +208,10 @@ figcaption {
   width: 25px;
   height: 25px;
   display: block;
+  fill: currentColor;
+}
+
+.social-icon path {
   fill: currentColor;
 }
 

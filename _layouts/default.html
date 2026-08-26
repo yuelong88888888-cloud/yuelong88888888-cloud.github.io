@@ -26,7 +26,7 @@
     <meta name="twitter:description" content="{{ meta_description | strip_html | normalize_whitespace | escape }}">
     {% if meta_image %}<meta name="twitter:image" content="{{ meta_image | absolute_url }}">{% endif %}
 
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   </head>
   <body class="page page--{{ page.nav | default: 'default' }}">
     <a class="skip-link" href="#main-content">Skip to main content</a>
