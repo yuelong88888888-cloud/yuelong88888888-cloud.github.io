@@ -8,9 +8,10 @@
   --faint: #918a91;
   --line: #38343a;
   --line-strong: #554d55;
-  --accent: #d2a2b4;
-  --accent-strong: #ecbfd0;
-  --accent-soft: #251c21;
+  --accent: #7fb3ed;
+  --accent-strong: #b8d8ff;
+  --accent-vivid: #68aefc;
+  --accent-soft: #172536;
   --figure: #f6f3ef;
   --figure-line: #cec8c1;
   --figure-text: #29262a;
@@ -349,7 +350,7 @@ figcaption {
 }
 
 .accent-text {
-  color: #e98bb6;
+  color: var(--accent-vivid);
 }
 
 .research-interests {
@@ -435,7 +436,7 @@ figcaption {
   padding: 0.12em 0.42em 0.16em;
   border-radius: 4px;
   background: #2a2f33;
-  color: #e98bb6;
+  color: var(--accent-vivid);
   font-family: var(--font-mono);
   font-size: clamp(1rem, 1.3vw, 1.45rem);
   font-weight: 500;
